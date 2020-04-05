@@ -12,6 +12,9 @@ is.na(DATA)
 (DATA[!complete.cases(DATA),])
 
 # DATA CLEANING AND PREPARATION
+names(DATA)[names(DATA)=='ï..country']='country'
+names(DATA)[names(DATA)=='gdp_for_year....']='gdp_for_year'
+names(DATA)[names(DATA)=='gdp_per_capita....']='gdp_per_capita'
 DATA$year=as.factor(DATA$year)
 DATA$suicides.100k.pop=as.numeric(DATA$suicides.100k.pop)
 DATA$HDI.for.year=as.numeric(DATA$HDI.for.year)
